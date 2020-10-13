@@ -86,7 +86,7 @@ multiAdapterRunners().map(({ runner, adapterName }) =>
         })
       );
 
-      test(
+      test.skip(
         'updateItems: Should update multiple items',
         runner(setupKeystone, async ({ keystone }) => {
           // Seed the db
@@ -120,7 +120,7 @@ multiAdapterRunners().map(({ runner, adapterName }) =>
           );
         })
       );
-      test(
+      test.skip(
         'deleteItems: Should delete multiple items',
         runner(setupKeystone, async ({ keystone }) => {
           // Seed the db

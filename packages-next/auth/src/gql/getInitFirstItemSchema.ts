@@ -1,6 +1,6 @@
-import type { GraphQLSchemaExtension, BaseKeystone } from '@keystone-next/types';
+import type { GraphQLSchemaExtension } from '@keystone-next/types';
 
-import { AuthGqlNames } from '../types';
+import { AuthGqlNames, Context } from '../types';
 
 export function getInitFirstItemSchema({
   listKey,
@@ -36,7 +36,11 @@ export function getInitFirstItemSchema({
       `,
     resolvers: {
       Mutation: {
-        async [gqlNames.createInitialItem](rootVal, { data }, context) {
+        async [gqlNames.createInitialItem](
+          rootVal: any,
+          { data }: Record<string, any>,
+          context
+        ) {
           if (!context.startSession) {
             throw new Error('No session implementation available on context');
           }

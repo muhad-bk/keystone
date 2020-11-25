@@ -48,7 +48,11 @@ export function getBaseAuthSchema({
     `,
     resolvers: {
       Mutation: {
-        async [gqlNames.authenticateItemWithPassword](root, args, context) {
+        async [gqlNames.authenticateItemWithPassword](
+          root: any,
+          args: { [_secretField: string]: string },
+          context
+        ) {
           if (!context.startSession) {
             throw new Error('No session implementation available on context');
           }
@@ -98,7 +102,7 @@ export function getBaseAuthSchema({
         },
       },
       AuthenticatedItem: {
-        __resolveType(rootVal, { session }) {
+        __resolveType(rootVal: any, { session }) {
           return session?.listKey;
         },
       },

@@ -2,6 +2,7 @@ import {
   BaseGeneratedListTypes,
   KeystoneAdminUIConfig,
   KeystoneConfig,
+  KeystoneListsAPI,
 } from '@keystone-next/types';
 
 export type AuthGqlNames = {
@@ -92,3 +93,12 @@ export type AuthTokenRedemptionErrorCode =
   | 'TOKEN_MISMATCH'
   | 'TOKEN_EXPIRED'
   | 'TOKEN_REDEEMED';
+
+type T = KeystoneListsAPI<Record<string, BaseGeneratedListTypes>>[string];
+type KeystoneList = { adminUILabels: { singular: string; plural: string } };
+export type Context = {
+  lists: Record<string, T>;
+  keystone: { lists: Record<string, KeystoneList> };
+  session: { itemId: string; listKey: string } | null | undefined; // FIXME: make this optional
+  startSession: (data: unknown) => Promise<string>; // FIXME: make this optional
+};

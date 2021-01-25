@@ -12,12 +12,12 @@
     "@keystone-ui/core": "^1.0.4",
     "@keystone-ui/icons": "^1.0.0",
     "@keystone-ui/popover": "^1.1.1",
-    "@types/react-select": "^3.1.2",
+    "@types/react-select": "^4.0.1",
     "date-fns": "^2.16.1",
     "react": "^16.14.0",
     "react-day-picker": "npm:react-day-picker@^7.4.8",
     "react-focus-lock": "^2.5.0",
-    "react-select": "^3.2.0"
+    "react-select": "^4.0.2"
   },
   "engines": {
     "node": ">=10.0.0"

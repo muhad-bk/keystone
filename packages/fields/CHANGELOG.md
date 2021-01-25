@@ -1,5 +1,18 @@
 # @keystonejs/fields
 
+## 21.1.0
+
+### Minor Changes
+
+- [`a886039a1`](https://github.com/keystonejs/keystone/commit/a886039a1fc17c9b60b2955f0e58916ab1c3d7bf) [#4707](https://github.com/keystonejs/keystone/pull/4707) Thanks [@timleslie](https://github.com/timleslie)! - Added support for the `Decimal` field type with the Prisma database adapter.
+
+* [`680169cad`](https://github.com/keystonejs/keystone/commit/680169cad62dd889ec95961cba9df3b4d012887f) [#4706](https://github.com/keystonejs/keystone/pull/4706) Thanks [@timleslie](https://github.com/timleslie)! - Changed `id` sub-field generator for `File` field type from mongoose ObjectID to `cuid` when using Knex or Prisma adapter.
+
+### Patch Changes
+
+- Updated dependencies [[`a886039a1`](https://github.com/keystonejs/keystone/commit/a886039a1fc17c9b60b2955f0e58916ab1c3d7bf)]:
+  - @keystonejs/adapter-prisma@2.1.0
+
 ## 21.0.2
 
 ### Patch Changes

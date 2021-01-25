@@ -1,5 +1,13 @@
 # @keystonejs/test-utils
 
+## 11.1.1
+
+### Patch Changes
+
+- Updated dependencies [[`a886039a1`](https://github.com/keystonejs/keystone/commit/a886039a1fc17c9b60b2955f0e58916ab1c3d7bf)]:
+  - @keystonejs/adapter-prisma@2.1.0
+  - @keystone-next/keystone@9.1.1
+
 ## 11.1.0
 
 ### Minor Changes

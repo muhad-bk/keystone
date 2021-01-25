@@ -1,5 +1,11 @@
 # @keystonejs/adapter-prisma
 
+## 2.1.0
+
+### Minor Changes
+
+- [`a886039a1`](https://github.com/keystonejs/keystone/commit/a886039a1fc17c9b60b2955f0e58916ab1c3d7bf) [#4707](https://github.com/keystonejs/keystone/pull/4707) Thanks [@timleslie](https://github.com/timleslie)! - Added support for the `Decimal` field type with the Prisma database adapter.
+
 ## 2.0.0
 
 ### Major Changes

@@ -16,7 +16,7 @@ import { PrismaAdapter } from '@keystonejs/adapter-prisma';
 import { initConfig, createSystem } from '@keystone-next/keystone';
 import type { KeystoneConfig, BaseKeystone, KeystoneContext } from '@keystone-next/types';
 
-export type AdapterName = 'mongoose' | 'knex' | 'prisma_postgresql';
+export type AdapterName = 'mongoose' | 'knex' | 'prisma_postgresql' | 'prisma_sqlite';
 
 const argGenerator = {
   mongoose: getMongoMemoryServerConfig,
@@ -49,13 +49,13 @@ const argGenerator = {
     url: process.env.DATABASE_URL,
     provider: 'sqlite',
     // Put the generated client at a unique path
-    getPrismaPath: ({ prismaSchema }) =>
+    getPrismaPath: ({ prismaSchema }: { prismaSchema: string }) =>
       path.join(
         '.api-test-prisma-clients',
         crypto.createHash('sha256').update(prismaSchema).digest('hex')
       ),
     // Slice down to the hash make a valid postgres schema name
-    getDbSchemaName: ({ prismaSchema }) =>
+    getDbSchemaName: ({ prismaSchema }: { prismaSchema: string }) =>
       crypto.createHash('sha256').update(prismaSchema).digest('hex').slice(0, 16),
     // Turn this on if you need verbose debug info
     enableLogging: false,

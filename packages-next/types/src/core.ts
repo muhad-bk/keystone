@@ -80,6 +80,9 @@ export type KeystoneConfig = {
           getDbSchemaName?: (arg: { prismaSchema: any }) => string;
           enableLogging?: boolean;
         }
+        | {
+          adapter: 'prisma_sqlite';
+        }
     );
   graphql?: {
     path?: string;

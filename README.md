@@ -9,7 +9,6 @@
 <p>Keystone helps you build faster and scale further than any other CMS or App Framework. Just describe your schema, and get a powerful GraphQL API & beautiful Management UI for content and data.</p>
 <p>No boilerplate or bootstrapping – just elegant APIs to help you ship the code that matters without sacrificing the flexibility or power of a bespoke back-end.
 </p>
-<sub>Looking for Keystone 5? Head over to <a href="https://github.com/keystonejs/keystone-5"><code>keystone-5</code></a>.</sub>
 <br><br>
 
 ![NPM](https://img.shields.io/npm/l/keystone)
@@ -71,6 +70,10 @@ We do our best to catch this but recommend updating Keystone packages together t
 ## Code of Conduct
 
 KeystoneJS adheres to the [Contributor Covenant Code of Conduct](/CODE-OF-CONDUCT.md).
+
+## Security
+
+For vulnerabilty reporting, please refer to our [security policy](/SECURITY.md).
 
 ## License
 
